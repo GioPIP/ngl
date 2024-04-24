@@ -1,44 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
     <!--Style-->
     <style>
+        /*Colors*/
+        :root {
+            --grey-color: #353536;
+            --yellow-color: #FCD52E;
+        }
 
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        /*General*/
+        .ngl_title {
+            text-align: center;
+            font-size: 40px;
+            color: black;
+            font-weight: 700;
+        }
+        .ngl_space {
+            padding: 70px 0;
+        }
+        .ngl_btn a{
+            background-color: var(--yellow-color);
+            color: black;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: 700;
+            border-radius: 28px;
+            transition: all .4s;
+        }
+        .ngl_btn a:hover{
+            background-color: black;
+            color: var(--yellow-color);
+        }
+
+        /*Why Get Involved*/
+        .ngl_involved {
+            background-image: url("https://partnerinpublishing.com/ngl/fondo2.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .ngl_involved__item{
+            margin-bottom: 20px;
+        }
+        .ngl_involved__item_header-icon {
+            background-color: var(--yellow-color);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ngl_involved__item_header {
+            background-color: var(--grey-color);
+        }
+        .ngl_involved__item_body{
+            background-color: white;
+            padding: 30px;
+        }
+        .ngl_involved__item_body h3{
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .ngl_involved__grid{
+            margin-top: 40px;
+        }
+
+        /*Footer*/
+        .ngl_footer {
+            background-color: var(--grey-color);
+            padding: 50px 0;
+        }
+
+        .ngl_footer__text {
+            border-bottom: 1px solid white;
+            padding-bottom: 15px;
+        }
+
+        .ngl_footer__text p {
+            color: white;
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .ngl_footer__bottom {
+            padding: 40px 30px 10px 30px;
+        }
+
+        .ngl_footer__logo {
+            width: 350px;
+        }
+
+        .ngl_footer__copyright {
+            color: white;
+            text-align: center;
+        }
+
+        .ngl_footer__text-2 {
+            color: white;
+            font-size: 13px;
+            font-style: italic;
+            text-align: right;
+        }
+
+        /*Responsive*/
+        @media (max-width: 991.98px) {
+            .ngl_title{
+                font-size: 30px;
+            }
+            .ngl_involved__item_body h3{
+                font-size: 25px43;
+            }
+            .ngl_footer__text p {
+                font-size: 16px;
+            }
+
+            .ngl_footer__logo_container {
+                text-align: center;
+            }
+
+            .ngl_footer__copyright {
+                margin-top: 15px;
+            }
+
+            .ngl_footer__text-2 {
+                text-align: center;
+            }
+        }
     </style>
-    
+
     <!--Heander-->
-    <section class="ngl__header">
+    <section class="ngl_header">
 
     </section>
 
     <!--Banner-->
-    <section class="ngl__banner">
+    <section class="ngl_banner">
 
     </section>
 
     <!--Date-->
-    <section class="ngl__date">
+    <section class="ngl_date">
 
     </section>
 
     <!--What's in Store for You?-->
-    <section class="ngl__store">
+    <section class="ngl_store">
 
     </section>
 
     <!--Why Get Involved-->
-    <section class="ngl__involved">
+    <section class="ngl_involved ngl_space">
+        <div class="container">
+            <h2 class="ngl_title">
+                Why Get Involved
+            </h2>
+            <div class="row row-cols-lg-3 row-cols-sm-1 ngl_involved__grid">
+                <!--Item-->
+                <div class="ngl_involved__item">
+                    <div class="ngl_involved__item_header">
+                        <div class="ngl_involved__item_header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="36" viewBox="0 0 50 36"
+                                fill="none">
+                                <path
+                                    d="M25.1125 36C20.0875 36 15.8125 34.2563 12.2875 30.7688C8.7625 27.2812 7 23.025 7 18V17.6063L3.4 21.2063L0.25 18.0563L9.25 9.05625L18.25 18.0563L15.1 21.2063L11.5 17.6063V18C11.5 21.75 12.8219 24.9375 15.4656 27.5625C18.1094 30.1875 21.325 31.5 25.1125 31.5C26.0875 31.5 27.0437 31.3875 27.9812 31.1625C28.9187 30.9375 29.8375 30.6 30.7375 30.15L34.1125 33.525C32.6875 34.35 31.225 34.9688 29.725 35.3813C28.225 35.7938 26.6875 36 25.1125 36ZM40.75 26.9438L31.75 17.9438L34.9 14.7938L38.5 18.3938V18C38.5 14.25 37.1781 11.0625 34.5344 8.4375C31.8906 5.8125 28.675 4.5 24.8875 4.5C23.9125 4.5 22.9563 4.6125 22.0188 4.8375C21.0813 5.0625 20.1625 5.4 19.2625 5.85L15.8875 2.475C17.3125 1.65 18.775 1.03125 20.275 0.61875C21.775 0.20625 23.3125 0 24.8875 0C29.9125 0 34.1875 1.74375 37.7125 5.23125C41.2375 8.71875 43 12.975 43 18V18.3938L46.6 14.7938L49.75 17.9438L40.75 26.9438Z"
+                                    fill="#1C1B1F" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ngl_involved__item_body">
+                        <h3>Honorarium and Refreshments</h3>
+                        <p>As a token of our appreciation, all focus group participants will receive an honorarium.
+                            Additionally, we'll provide delicious refreshments, creating a comfortable and engaging
+                            environment for fruitful discussions.</p>
+                    </div>
+                </div>
 
+                <!--Item-->
+                <div class="ngl_involved__item">
+                    <div class="ngl_involved__item_header">
+                        <div class="ngl_involved__item_header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="36" viewBox="0 0 50 36"
+                                fill="none">
+                                <path
+                                    d="M25.1125 36C20.0875 36 15.8125 34.2563 12.2875 30.7688C8.7625 27.2812 7 23.025 7 18V17.6063L3.4 21.2063L0.25 18.0563L9.25 9.05625L18.25 18.0563L15.1 21.2063L11.5 17.6063V18C11.5 21.75 12.8219 24.9375 15.4656 27.5625C18.1094 30.1875 21.325 31.5 25.1125 31.5C26.0875 31.5 27.0437 31.3875 27.9812 31.1625C28.9187 30.9375 29.8375 30.6 30.7375 30.15L34.1125 33.525C32.6875 34.35 31.225 34.9688 29.725 35.3813C28.225 35.7938 26.6875 36 25.1125 36ZM40.75 26.9438L31.75 17.9438L34.9 14.7938L38.5 18.3938V18C38.5 14.25 37.1781 11.0625 34.5344 8.4375C31.8906 5.8125 28.675 4.5 24.8875 4.5C23.9125 4.5 22.9563 4.6125 22.0188 4.8375C21.0813 5.0625 20.1625 5.4 19.2625 5.85L15.8875 2.475C17.3125 1.65 18.775 1.03125 20.275 0.61875C21.775 0.20625 23.3125 0 24.8875 0C29.9125 0 34.1875 1.74375 37.7125 5.23125C41.2375 8.71875 43 12.975 43 18V18.3938L46.6 14.7938L49.75 17.9438L40.75 26.9438Z"
+                                    fill="#1C1B1F" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ngl_involved__item_body">
+                        <h3>Honorarium and Refreshments</h3>
+                        <p>As a token of our appreciation, all focus group participants will receive an honorarium.
+                            Additionally, we'll provide delicious refreshments, creating a comfortable and engaging
+                            environment for fruitful discussions.</p>
+                    </div>
+                </div>
+
+                <!--Item-->
+                <div class="ngl_involved__item">
+                    <div class="ngl_involved__item_header">
+                        <div class="ngl_involved__item_header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="36" viewBox="0 0 50 36"
+                                fill="none">
+                                <path
+                                    d="M25.1125 36C20.0875 36 15.8125 34.2563 12.2875 30.7688C8.7625 27.2812 7 23.025 7 18V17.6063L3.4 21.2063L0.25 18.0563L9.25 9.05625L18.25 18.0563L15.1 21.2063L11.5 17.6063V18C11.5 21.75 12.8219 24.9375 15.4656 27.5625C18.1094 30.1875 21.325 31.5 25.1125 31.5C26.0875 31.5 27.0437 31.3875 27.9812 31.1625C28.9187 30.9375 29.8375 30.6 30.7375 30.15L34.1125 33.525C32.6875 34.35 31.225 34.9688 29.725 35.3813C28.225 35.7938 26.6875 36 25.1125 36ZM40.75 26.9438L31.75 17.9438L34.9 14.7938L38.5 18.3938V18C38.5 14.25 37.1781 11.0625 34.5344 8.4375C31.8906 5.8125 28.675 4.5 24.8875 4.5C23.9125 4.5 22.9563 4.6125 22.0188 4.8375C21.0813 5.0625 20.1625 5.4 19.2625 5.85L15.8875 2.475C17.3125 1.65 18.775 1.03125 20.275 0.61875C21.775 0.20625 23.3125 0 24.8875 0C29.9125 0 34.1875 1.74375 37.7125 5.23125C41.2375 8.71875 43 12.975 43 18V18.3938L46.6 14.7938L49.75 17.9438L40.75 26.9438Z"
+                                    fill="#1C1B1F" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ngl_involved__item_body">
+                        <h3>Honorarium and Refreshments</h3>
+                        <p>As a token of our appreciation, all focus group participants will receive an honorarium.
+                            Additionally, we'll provide delicious refreshments, creating a comfortable and engaging
+                            environment for fruitful discussions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ngl_btn mt-5 text-center">
+                <a href="#" target="_blank">Book Your Session Now</a>
+            </div>
+        </div>
     </section>
 
     <!--Footer-->
-    <section>
+    <section class="ngl_footer">
+        <div class="container">
+            <div class="col-12">
+                <div class="ngl_footer__text">
+                    <p>The Michigan Council for Social Studies conference offers an exciting platform, and we'd love for
+                        you
+                        to stop by Table B to check out our newest offerings and chat with us about how National
+                        Geographic
+                        Learning and Cengage can support you on your educational journey.
+                    </p>
+                </div>
+            </div>
+        </div>
 
+        <div class="row ngl_footer__bottom">
+            <div class="col-12 col-lg-4 ngl_footer__logo_container">
+                <img src="https://partnerinpublishing.com/ngl/logowhite.png" alt="Logo NGL" class="ngl_footer__logo">
+            </div>
+            <div class="col-12 col-lg-4 ngl_footer__copyright">
+                <p>© 2024 Cengage Learning, Inc.</p>
+            </div>
+            <div class="col-12 col-lg-4 ngl_footer__text-2">
+                <p>“National Geographic”, “National Geographic Society” and the Yellow Border Design are registered
+                    trademarks of the National Geographic Society ®Marcas Registradas.</p>
+            </div>
+        </div>
     </section>
 </body>
+
 </html>
