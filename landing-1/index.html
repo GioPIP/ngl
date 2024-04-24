@@ -3,22 +3,1420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Cengage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 </head>
 <body>
     <!--Style-->
     <style>
+        /* header */
+
+        .ngl-button-header {
+        background-color: #353536;
+        color: white;
+        padding: 10px;
+        border-radius: 40px;
+        text-decoration: none;
+        }
+
+        .ngl-button-header:hover{
+            color: white;
+            background-color: #2a2a2b;
+        }
+
+        /* banner */
+        .ngl-hero {
+        background-image: url(https://partnerinpublishing.com/wp-content/uploads/2024/04/group2.jpg);
+        min-height: 1000px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+        .ngl-titlebanner{
+            margin: 60px 0px 0px 00px;
+            background-color: #fcd52e;
+            max-width: 70%;
+            font-size: 22px;
+        font-family: ´Open Sans´, sans-serif;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        padding: 20px;
+        line-height: 1.2;
+        }
+
+        .ngl_banner_col_2 .fs-1 {
+        font-family: ´Open Sans´, sans-serif;
+        background-color: #353536;
+        color: white;
+        padding: 20px;
+        font-size: 54px;
+        font-weight: 100;
+        max-width: 70%;
+        }
+
+
+        .ngl-parrafbanner {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.626);
+        padding: 20px;
+        font-size: 22px;
+        border: 2px solid #fcd52e;
+        font-family: ´Open Sans´, sans-serif;
+        font-weight: 500;
+        }
+
+
+
+        .ngl_banner_col_2 {
+            padding-left: 40px;
+        }
+        
+        .ngl_banner {
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+
+        /* date */
+
+        .ngl-date {
+        max-width: 40% !important;
+        position: relative;
+        z-index: 10000 !important;
+        margin-top: -20px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        }
+
+        /* whatsinstore */
+
+        .ngl-whatsinstore {
+        max-width: 60%;
+        margin: auto;
+        }
+
+
+        /* Footer */
+
+        .ngl-footer {
+        width: 100% !important;
+        max-width: 65% !important;
+        text-align: center;
+        }
+
+        .ngl-footer p {
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+        .ngl-lineafooter {
+        height: 3px !important;
+        max-width: 50%;
+        display: block;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        }
+
+        .ngl-copyright {
+        font-style: normal;
+        font-weight: semibold;
+        padding-top: 20px;
+        font-size: 16px;
+        }
+
+        .ngl-logofooter img {
+            max-width:50% ;
+        
+        }
+
+        .ngl-footer {
+            text-align: left;
+        }
+
+        .ngl-text-footer {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 100;
+
+            line-height: normal;
+        }
+
+
+        /* form no pip*/
+
+        .list-order .elq-item-label {
+            font-size: 13px;
+        }
+
+        .elq-item-label {
+            font-size: 18px;
+        }
+
+        .elq-label {
+                font-size: 14px;
+        
+            }
+
+        .elq-form .elq-required {
+        color: red !important;
+        display: inline;
+        float: none;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        }
+
+        .elq-form #elq-FormLastRow {
+        position: absolute;
+        left: -80%;
+        top: -80%;
+        }
+
+        .elq-form .elq-label {
+        display: inline-block;
+        max-width: 100%;
+        font-weight: 400;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        }
+
+        .elq-form .elq-label-top {
+        padding-bottom: 3px;
+        }
+
+        .elq-form .elq-item-label {
+        max-width: 100%;
+        font-weight: 400;
+        box-sizing: border-box;
+        }
+
+        .elq-form .list-order {
+        margin-left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+
+        .elq-form .one-column {
+        width: 100%;
+        clear: both;
+        }
+
+        .elq-form .two-column {
+        float: left;
+        width: 38%;
+        }
+
+        .elq-form .three-column {
+        float: left;
+        width: 30%;
+        }
+
+        .elq-form .elq-item-textarea {
+        resize: vertical;
+        min-height: 48px;
+        max-height: 360px;
+        box-sizing: border-box;
+        }
+
+        .elq-form .elq-item-input,
+        .elq-form .elq-item-select,
+        .elq-form .elq-item-textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        font: inherit;
+        margin: 0;
+        }
+
+        .elq-form .elq-item-select {
+        text-transform: none;
+        }
+
+        .elq-form .row.single-checkbox-row {
+        margin-left: 0;
+        }
+
+        .elq-form .elq-field-style {
+        padding-bottom: 10px;
+        }
+
+
+
+        @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(1turn);
+        }
+        }
+
+        @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(1turn);
+        }
+        }
+
+        .elq-form .loader {
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 10px;
+        border: 3px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 3px solid #3498db;
+        width: 20px;
+        height: 20px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        }
+
+        .elq-form input[type="checkbox"],
+        .elq-form input[type="radio"] {
+        margin: 0;
+        }
+
+        .elq-form .list-order input[type="radio"] {
+        margin-left: 1px;
+        }
+
+        .elq-form *,
+        .elq-form :after,
+        .elq-form :before {
+        box-sizing: border-box;
+        }
+
+        .elq-form html {
+        font-size: 10px;
+        -webkit-tap-highlight-color: transparent;
+        }
+
+        .elq-form body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+        color: #333;
+        background-color: #fff;
+        }
+
+        .elq-form button,
+        .elq-form input,
+        .elq-form select,
+        .elq-form textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        }
+
+        .elq-form a {
+        color: #337ab7;
+        text-decoration: none;
+        }
+
+        .elq-form a:focus,
+        .elq-form a:hover {
+        color: #23527c;
+        text-decoration: underline;
+        }
+
+        .elq-form a:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+        }
+
+        .elq-form figure {
+        margin: 0;
+        }
+
+        .elq-form img {
+        vertical-align: middle;
+        }
+
+        .elq-form .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        }
+
+        .elq-form .img-rounded {
+        border-radius: 6px;
+        }
+
+        .elq-form .img-thumbnail {
+        padding: 4px;
+        line-height: 1.42857;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+        }
+
+        .elq-form .img-circle {
+        border-radius: 50%;
+        }
+
+        .elq-form hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #eee;
+        }
+
+        .elq-form .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        }
+
+        .elq-form .sr-only-focusable:active,
+        .elq-form .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        }
+
+        .LV_invalid_field,
+        input.LV_invalid_field:active,
+        input.LV_invalid_field:hover,
+        textarea.LV_invalid_field:active,
+        textarea.LV_invalid_field:hover {
+        outline: 1px solid #c00;
+        }
+
+        .LV_validation_message {
+        font-weight: 700;
+        margin: 0 0 0 5px;
+        }
+
+        .LV_valid {
+        display: none;
+        }
+
+        .LV_invalid {
+        color: #c00;
+        font-size: 10px;
+        }
+
+        .submit-button-style {
+        padding: 7px 20px;
+        border: 1px solid #979797;
+        border-radius: 3px;
+        background-color: #fff;
+        color: #4a4a4a;
+        cursor: pointer;
+        }
+
+        .checkbox-aligned {
+        margin-left: 5px;
+        display: inline;
+        }
+
+        .form-element-layout {
+        padding: 5px 10px;
+        }
+
+        .form-element-instruction {
+        font-size: 10px;
+        }
+
+        .form-element-form-text {
+        margin: 0;
+        }
+
+        .form-field-visible-xs-block {
+        display: none;
+        }
+
+        .elq-form-design-field .list-order input[type="radio"] {
+        margin-left: 1px;
+        }
+
+        .form-field-hidden-xs {
+        display: block;
+        }
+
+        .custom-overlay {
+        margin-left: 2px;
+        background: #fff;
+        box-shadow: 0 0 4px 0 #777;
+        border-radius: 2px;
+        max-width: 256px;
+        }
+
+        /* end style form */
+
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+        h1 {
+        font-family: "Open Sans", sans-serif;
+        }
+
+        .why_get_involved__pip {
+        background: url("https://partnerinpublishing.com/ngl/fondo2.png");
+        padding: 40px 0px 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 3em 1em;
+        min-height: 600px;
+        }
+
+        .container_why_get_involved__pip {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        }
+
+        .why_get_involved_title__pip {
+        font-family: "Open Sans", sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 66px;
+        text-align: center;
+        }
+
+        .why_get_involved_grid__pip {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        padding: 2.5em 0px;
+        }
+
+        .why_get_involved_grid_card__pip {
+        background-color: white;
+        }
+
+        .why_get_involved_grid_card_header__pip {
+        display: flex;
+        background: #353536;
+        }
+
+        .why_get_involved_grid_card_header__pip svg {
+        display: flex;
+        background: #fcd52e;
+        padding: 10px;
+        width: 45px;
+        min-height: 45px;
+        }
+
+        .why_get_involved_grid_card_content__pip {
+        padding: 1em;
+        }
+
+        .why_get_involved_grid_card_content__pip h3 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+
+        .why_get_involved_grid_card_content__pip p {
+        padding: 1.5em 0px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        }
+
+        .why_get_involved_btn__pip {
+        background-color: #fcd52e;
+        padding: 15px 20px;
+        border-radius: 50px;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: center;
+        }
+
+        .footer__pip {
+        padding: 1.5em 4em;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 35px;
+        text-align: center;
+        background: #353536;
+        color: white;
+        }
+
+        .barra-amarilla {
+        background-color: #fcd52e;
+        height: 8px;
+        width: 96px;
+        margin: 10px 0px;
+        }
+
+        /* media queries */
+
+        @media (max-width: 425px) {
+
+
+            .list-order .elq-item-label {
+                font-size: 11px;
+            }
+
+            .single-checkbox-row {
+                margin-top: 5px;
+            }
+
+            .elq-item-label {
+                font-size: 18px;
+        
+            }
+
+            .elq-label  {
+                font-size: 13px;
+            }
+
+
+            .ngl-button-header {
+
+
+                    display: block;
+                    margin: 10px auto;
+                    ;
+            }
+        .ngl_banner_col_2 {
+            padding: 0px;
+            margin-top: 20px!important;
+        }
+
+        .text-footer {
+            width: 100% !important;
+        }
+
+        .logofooter {
+            padding: 20px;
+            position: relative !important;
+            width: 80% !important;
+        }
+
+        .footer__pip p {
+            padding: 0px !important;
+        }
+
+        .ngl_banner {
+            margin: 0px;
+            padding: 0px !important;
+        }
+
+        .navbar-brand img {
+            width: 100%;
+        }
+
+        .titlebanner {
+            width: 100% !important;
+        }
+
+        .titlebanner p {
+            font-size: 24px !important;
+        }
+
+        .navbar-toggler {
+            display: none;
+        }
+        }
+
+        @media only screen and (max-width: 900px) {
+        .navbar-toggler {
+            display: none;
+        }
+
+        .ngl_banner .ngl-banner-block{
+            flex-direction: column-reverse;
+            width: 100% !important;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .logofooter {
+            padding: 20px;
+            position: relative !important;
+            width: 80% !important;
+        }
+
+        .container .row {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .contenedor2 div:nth-child(3) div {
+            flex-direction: column-reverse !important;
+        }
+
+        .container .row div {
+            width: 100%;
+        }
+        }
+
+        @media only screen and (max-width: 700px) {
+        .why_get_involved_grid__pip {
+            grid-template-columns: 1fr;
+        }
+        }
+
+        @media only screen and (max-width: 600px) {
+        .container .row {
+            display: flex !important;
+            justify-content: center;
+            flex-direction: column !important;
+        }
+
+        .container_why_get_involved__pip {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .footer__pip {
+            padding: 0.5em 1em;
+            font-size: 14px;
+        }
+        }
+
+        @media only screen and (max-width: 600px) {
+        .container_why_get_involved__pip {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .why_get_involved_grid__pip {
+            grid-template-columns: 1fr;
+        }
+
+        .footer__pip {
+            padding: 0.5em 1em;
+            font-size: 14px;
+        }
+        }
+
+        @media (max-width: 767px) {
+        .form-field-visible-xs-block {
+            display: block;
+        }
+        }
+
+        @media (max-width: 768px) {
+        .form-field-hidden-xs {
+            display: none;
+        }
+
+        .ngl-parrafbanner {
+            margin-bottom:22px;
+        }
+
+        .ngl_banner_col_2 {
+            padding: 0px;
+        }
+
+        .ngl-titlebanner {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .ngl_banner_col_2 .fs-1 {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .ngl_banner{
+            margin: 0px!important;
+            padding-top: 0px!important;
+        
+        }
+        
+        .ngl-columna2 {
+            flex-direction: row!important;
+        }
+
+        }
 
     </style>
     
-    <!--Heander-->
+    <!--Header-->
     <section class="ngl__header">
-
+        <div class="ngl-hero" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid px-5">
+                <a class="navbar-brand" href="#">
+                  <img width="100%" src="https://partnerinpublishing.com/ngl/logo.svg" alt="" />
+                </a>
+                <a href="#" class="ngl-button-header"> Book Your Session</a>
+        
+        
+              </div>
+            </nav>
+        
+            <div class="ngl_banner" style="padding: 30px 30px">
+              <div class="row ngl-banner-block">
+        
+        
+                <div class="col-lg-4 col-sm-12 p-0 p-md-0 ">
+        
+        
+        
+                  <div style="
+                        background-color: white;
+                        padding: 20px 20px;
+                        border-radius: 20px;">
+        
+                    <!-- formulario -->
+        
+                    <form method="post" name="ngl-focus-group-nsta" action="https://s2138.t.eloqua.com/e/f2"
+                      onsubmit="return handleFormSubmit(this)" id="form4835" class="elq-form"
+                      style="font-family: ´Open Sans´, sans-serif;">
+        
+                      <h2 style="font-size: 22px; text-align: center;font-weight: bold;">
+                        Select a Session day <br> and time below <input value="ngl-focus-group-nsta" type="hidden"
+                          name="elqFormName">
+                        <input value="2138" type="hidden" name="elqSiteId">
+                        <input name="elqCampaignId" type="hidden">
+                        <div class="layout container-fluid p-0">
+        
+                          <div class="r">
+                            <div class="grid-layout-col">
+                              <div class="layout-col col-sm-12 col-xs-12">
+        
+                              </div>
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="grid-layout-col">
+                              <div class="layout-col col-sm-12 col-xs-12">
+                                <div id="formElement5" class="elq-field-style form-element-layout r ">
+                                  <div style="text-align:center;" class="col-sm-12 col-xs-12">
+                                    <label class="elq-label " for="fe73264" style="font-size: 14px;">Session Date
+                                      <span class="elq-required">*
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <div class="r">
+                                      <div class="col-xs-12 ">
+                                        <div class="field-control-wrapper" id="fe73264">
+                                          <div class="container-fluid p-0 " style="font-size: 14px;">
+                                            <div class="row p-0 ngl-columna2">
+                                              <div class="col-6">
+                                                <h2 style="
+                                                font-size: 14px;
+                                                text-align: center;
+                                                font-weight: bold;
+                                                line-height: 0;
+                                                margin-top: 20px;
+                                              ">
+                                                  May 2
+                                                </h2>
+                                                <p style="text-align: center; font-size: 12px;margin-bottom: 5px;">Thursday</p>
+                                                <div class="list-order one-column">
+                                                  <input type="radio" id="radio-Thursday 11:45-1:00_vzdj1epm"
+                                                    value="Thursday 4:00-5:30" name="sessionDate">
+                                                  <label class="checkbox-aligned elq-item-label"
+                                                    for="radio-Thursday 4:00-5:30_vzdj1epm">4:00-5:30 PM
+                                                  </label>
+                                                  <br>
+                                                </div>
+        
+        
+                                              </div>
+                                              <!-- friday -->
+                                              <div class="col-6 ">
+        
+                                                <h2 style="
+                                                font-size: 14px;
+                                                text-align: center;
+                                                font-weight: bold;
+                                                line-height: 0;
+                                                margin-top: 20px;
+                                             
+                                              ">
+                                                  May 3
+                                                </h2>
+                                                <p style="text-align: center; font-size: 12px;   margin-bottom: 5px;">Friday</p>
+                                                <div class="list-order one-column" style="padding-left: 5%;">
+                                                  <input type="radio" id="radio-Friday 9:00-10:15_2386kejb"
+                                                    value="Friday 9:30-10:30" name="sessionDate">
+                                                  <label class="checkbox-aligned elq-item-label"
+                                                    for="radio-Friday 8:30-10:30_2386kejb">8:30-10:30 AM
+                                                  </label>
+                                                  <br>
+                                                </div>
+        
+                                                <div class="list-order one-column" style="padding-left: 9%;">
+                                                  <input type="radio" id="radio-Friday 10:30-11:45_wywdwctk"
+                                                    value="Friday 11:00-12:30" name="sessionDate">
+                                                  <label class="checkbox-aligned elq-item-label"
+                                                    for="radio-Friday 11:00-12:30_wywdwctk">11:00-12:30 PM
+                                                  </label>
+                                                  <br>
+                                                </div>
+        
+                                                <div class="list-order one-column" style="padding-left: 9%;">
+                                                  <input type="radio" id="radio-Friday 10:30-11:45_wywdwctk"
+                                                    value="Friday 2:30-4:00" name="sessionDate">
+                                                  <label class="checkbox-aligned elq-item-label"
+                                                    for="radio-Friday 2:30-4:00_wywdwctk">02:30-04:00 PM
+                                                  </label>
+                                                  <br>
+                                                </div>
+                                                <!--   <div class="list-order one-column" style="padding-left: 22%;">
+                                            <input type="radio" id="radio-Friday 12:00-1:15_zozzk54n" value="Friday 12:00-1:15" name="sessionDate">
+                                            <label class="checkbox-aligned elq-item-label" for="radio-Friday 12:00-1:15_zozzk54n">12:00-1:15
+                                            </label>
+                                            <br>
+                                          </div> -->
+                                              </div>
+        
+                                            </div>
+        
+                                          </div>
+        
+                                        </div>
+        
+        
+                                      </div>
+        
+                                    </div>
+        
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+        
+                          </div>
+        
+        
+                          <div class="row">
+                            <div class="grid-layout-col layout-col col-sm-6 col-xs-12 col-6">
+        
+        
+                              <div id="formElement0" class="elq-field-style form-element-layout r p">
+                                <div style="text-align:left;" class="col-sm-12 col-xs-12">
+                                  <label class="elq-label " for="fe73255">First Name
+                                    <span class="elq-required">*
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="col-sm-12 col-xs-12 p-0">
+                                  <div class="r">
+                                    <div class="col-xs-12">
+                                      <div class="field-control-wrapper">
+                                        <input type="text" class="elq-item-input" name="firstName" id="fe73255" value="" style="width:100%;border-radius: 20px;
+                                          padding: 5px;
+                                          padding-right: 0px;
+                                          background-color: #f5f5f5;
+                                          border: none;">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+        
+                            </div>
+        
+                            <div class="grid-layout-col layout-col col-sm-6 col-xs-12 col-6">
+        
+                              <div id="formElement1" class="elq-field-style form-element-layout r">
+                                <div style="text-align:left;" class="col-sm-12 col-xs-12">
+                                  <label class="elq-label " for="fe73256">Last Name
+                                    <span class="elq-required">*
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="col-sm-12 col-xs-12 p-0">
+                                  <div class="r">
+                                    <div class="col-xs-12">
+                                      <div class="field-control-wrapper">
+                                        <input type="text" class="elq-item-input" name="lastName" id="fe73256" value="" style="width:100%;border-radius: 20px;
+                                          padding: 5px;
+                                          padding-right: 0px;
+                                          background-color: #f5f5f5;
+                                          border: none;">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+        
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="grid-layout-col">
+                              <div class="layout-col col-sm-12 col-xs-12">
+                                <div id="formElement2" class="elq-field-style form-element-layout r">
+                                  <div style="text-align:left;" class="col-sm-12 col-xs-12">
+                                    <label class="elq-label " for="fe73257">School Email
+                                      <span class="elq-required">*
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-sm-12 col-xs-12 p-0">
+                                    <div class="r">
+                                      <div class="col-xs-12">
+                                        <div class="field-control-wrapper">
+                                          <input type="text" class="elq-item-input" name="emailAddress" id="fe73257" value=""
+                                            style="width:100%;border-radius: 20px;
+                                          padding: 5px;
+                                          background-color: #f5f5f5;
+                                          border: none;">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+        
+                                  <div id="formElement4" class="elq-field-style form-element-layout r p-0 "
+                                    style="text-align: left;padding-top: 5px;">
+                                    <div class="col-sm-12 col-xs-12 ">
+                                      <label class="elq-label " style="padding-top: 10px;" for="fe73265">Grade level
+        
+                                        <span class="elq-required">*
+                                        </span>
+                                      </label>
+                                    </div>
+                                    <div class="col-sm-12 col-xs-12">
+                                      <div class="r">
+                                        <div class="col-xs-12">
+                                          <div class="field-control-wrapper">
+                                            <select class="elq-item-select " id="fe73265" name="grLevel" style="width:100%; width: 100%;
+                                            border-radius: 20px;
+                                            padding: 5px;
+                                            background-color: #f5f5f5;
+                                            font-weight: bold;
+                                            border: none;
+                                           " data-value="none">
+                                              <option value=""></option>
+                                              <option value="High School">High School
+                                              </option>
+                                              <option value="Middle School">Middle School
+                                              </option>
+                                              <option value="Both">Both
+                                              </option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+        
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="grid-layout-col">
+                              <div class="layout-col col-sm-12 col-xs-12">
+                                <div id="formElement3" class="elq-field-style form-element-layout r">
+                                  <div style="text-align:left;" class="col-sm-12 col-xs-12">
+                                    <label class="elq-label " for="fe73258">School District
+                                      <span class="elq-required">*
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-sm-12 col-xs-12 p-0">
+                                    <div class="r">
+                                      <div class="col-xs-12">
+                                        <div class="field-control-wrapper">
+                                          <input type="text" class="elq-item-input" name="schoolDistrict" id="fe73258" value=""
+                                            style="width:100%;border-radius: 20px;
+                                          padding: 5px;
+                                          background-color: #f5f5f5;
+                                          border: none;">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="r">
+                            <div class="grid-layout-col">
+                              <div class="layout-col col-sm-12 col-xs-12">
+                                <div id="formElement6" class="elq-field-style form-element-layout ">
+                                  <div class="col-sm-12 col-xs-12">
+                                    <div class="r">
+                                      <div class="col-xs-12 p-2">
+                                        <div>
+                                          <label class="checkbox-aligned elq-item-label" for="fe73262">Your Privacy Options
+                                            <div class="single-checkbox-row ">
+                                              <input type="checkbox" name="optIn" id="fe73262" checked="">
+                                              <span style="font-size: 12px;">Yes! I want to be the first to hear about exclusive
+                                                promotions and events from National Geographic Learning | Cengage and Big Ideas
+                                                Learning.</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="r">
+                          <div class="grid-layout-col">
+                            <div class="layout-col col-sm-12 col-xs-12">
+                              <div id="formElement7" class="elq-field-style form-element-layout ">
+                                <div class="col-sm-12 col-xs-12">
+                                  <div class="r">
+                                    <div class="col-xs-12 p-2">
+                                      <div> <label class="checkbox-aligned elq-item-label" for="fe73263">Age Check
+                                          <div class="single-checkbox-row ">
+        
+                                            <input type="checkbox" name="ageCheck" id="fe73263" checked="">
+        
+                                            <span style="font-size: 12px;">Please check this box to confirm you are over the age
+                                              of 18.</span>
+                                            <span class="elq-required"> *
+                                            </span>
+                                        </label>
+                                      </div>
+                                      <br>
+                                      <p style="font-size: 12px;">For more information about how your data will be handled
+                                        please
+                                        read our <a target="_blank" href="https://www.cengagegroup.com/privacy/">Privacy
+                                          Policy.</a> </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="grid-layout-col">
+                      <div class="layout-col col-sm-12 col-xs-12">
+                        <div id="formElement8" class="elq-field-style form-element-layout row">
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div>
+                                  <input type="Submit" class="submit-button-style d-block m-auto " style=" background-color: #fcd52e;
+                                          border: none;
+                                          padding: 10px 20px;
+                                          border-radius: 20px;
+                                          font-weight: bold;" value="Register Now" id="fe73260">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+        
+        
+                <!-- logica del form -->
+        
+        
+        
+                <script type="text/javascript" src="https://img.en25.com/i/livevalidation_standalone.compressed.js">
+                </script>
+                <script>function handleFormSubmit(ele) {
+                    var submitButton = ele.querySelector('input[type=submit]');
+                    var spinner = document.createElement('span');
+                    spinner.setAttribute('class', 'loader');
+                    submitButton.setAttribute('disabled', true);
+                    submitButton.style.cursor = 'wait';
+                    submitButton.parentNode.appendChild(spinner);
+                    return true;
+                  }
+                  function resetSubmitButton(e) {
+                    var submitButtons = e.target.form.getElementsByClassName('submit-button');
+                    for (var i = 0; i < submitButtons.length; i++) {
+                      submitButtons[i].disabled = false;
+                    }
+                  }
+                  function addChangeHandler(elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                      elements[i].addEventListener('change', resetSubmitButton);
+                    }
+                  }
+                  var form = document.getElementById('form4835');
+                  addChangeHandler(form.getElementsByTagName('input'));
+                  addChangeHandler(form.getElementsByTagName('select'));
+                  addChangeHandler(form.getElementsByTagName('textarea'));
+                  var nodes = document.querySelectorAll('#form4835 input[data-subscription]');
+                  if (nodes) {
+                    for (var i = 0, len = nodes.length; i < len; i++) {
+                      var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i].getAttribute('data-subscription');
+                      if (status === 'true') {
+                        nodes[i].checked = true;
+                      }
+                    }
+                  };
+                  var nodes = document.querySelectorAll('#form4835 select[data-value]');
+                  if (nodes) {
+                    for (var i = 0; i < nodes.length; i++) {
+                      var node = nodes[i];
+                      var selectedValue = node.dataset ? node.dataset.value : node.getAttribute('data-value');
+                      if (selectedValue) {
+                        for (var j = 0; j < node.options.length; j++) {
+                          if (node.options[j].value === selectedValue) {
+                            node.options[j].selected = 'selected';
+                            break;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  this.getParentElement = function (list) {
+                    return list[list.length - 1].parentElement
+                  };
+                  var dom0 = document.querySelector('#form4835 #fe73255');
+                  var fe73255 = new LiveValidation(dom0, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73255.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73255.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  fe73255.add(Validate.Length, {
+                    tooShortMessage: "Invalid length for field value", tooLongMessage: "Invalid length for field value", minimum: 0, maximum: 150
+                  }
+                  );
+                  fe73255.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  var dom1 = document.querySelector('#form4835 #fe73256');
+                  var fe73256 = new LiveValidation(dom1, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73256.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73256.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  fe73256.add(Validate.Length, {
+                    tooShortMessage: "Invalid length for field value", tooLongMessage: "Invalid length for field value", minimum: 0, maximum: 150
+                  }
+                  );
+                  fe73256.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  var dom2 = document.querySelector('#form4835 #fe73257');
+                  var fe73257 = new LiveValidation(dom2, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73257.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  fe73257.add(Validate.Format, {
+                    pattern: /(^[A-Z0-9!#\$%&'\*\+\-\/=\?\^_`\{\|\}~][A-Z0-9!#\$%&'\*\+\-\/=\?\^_`\{\|\}~\.]{0,62}@(([A-Z0-9](?:[A-Z0-9\-]{0,61}[A-Z0-9])?)(\.[A-Z0-9](?:[A-Z0-9\-]{0,61}[A-Z0-9])?)+)$)/i, failureMessage: "A valid email address is required"
+                  }
+                  );
+                  fe73257.add(Validate.Format, {
+                    pattern: /\.\.|\.@/i, failureMessage: "A valid email address is required", negate: "true"
+                  }
+                  );
+                  fe73257.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73257.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  var dom3 = document.querySelector('#form4835 #fe73258');
+                  var fe73258 = new LiveValidation(dom3, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73258.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73258.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  fe73258.add(Validate.Length, {
+                    tooShortMessage: "Invalid length for field value", tooLongMessage: "Invalid length for field value", minimum: 0, maximum: 200
+                  }
+                  );
+                  fe73258.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  var dom4 = document.querySelector('#form4835 #fe73265');
+                  var fe73265 = new LiveValidation(dom4, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73265.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  var dom5 = document.querySelectorAll('#form4835 [name="sessionDate"]');
+                  var fe73264 = new LiveValidation(dom5, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false, insertAfterWhatNode: this.getParentElement(dom5), isGroup: true
+                  }
+                    , true);
+                  fe73264.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73264.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  fe73264.add(Validate.Presence, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                  var dom6 = document.querySelector('#form4835 #fe73262');
+                  var fe73262 = new LiveValidation(dom6, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73262.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73262.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  var dom7 = document.querySelector('#form4835 #fe73263');
+                  var fe73263 = new LiveValidation(dom7, {
+                    validMessage: "", onlyOnBlur: false, wait: 300, isPhoneField: false
+                  }
+                  );
+                  fe73263.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                    }
+                    , failureMessage: "Value must not contain any URL's"
+                  }
+                  );
+                  fe73263.add(Validate.Custom, {
+                    against: function (value) {
+                      return !value.match(/(<([^>]+)>)/ig);
+                    }
+                    , failureMessage: "Value must not contain any HTML"
+                  }
+                  );
+                  fe73263.add(Validate.Acceptance, {
+                    failureMessage: "This field is required"
+                  }
+                  );
+                </script>
+        
+                <!-- termina logica del form  -->
+        
+        
+        
+              </div>
+        
+            </div>
+        
+            <div class="col-lg-8 col-sm-12 ngl_banner_col_2 " style="margin-top: 120px;" >
+              <div class="fs-1" >
+                Calling <span style="font-weight: bold">
+                  all grades 6–12 Social Studies Educators and Administrators
+                </span>
+              </div>
+        
+              <div class="ngl-titlebanner" >
+                <p>
+                  Join Us for Focus Groups <br />
+                  at the MCSS Conference! </p>
+              </div>
+        
+              <div class="ngl-parrafbanner" >
+                Are you dedicated to shaping social studies education in your district? Join middle and high school educators
+                for an exclusive focus group session during the Michigan Council For Social Studies conference in Clinton
+                Township, MI! <br> <br> In collaboration with National Geographic Learning / Cengage, you’ll provide key
+                insights into the evolution of social studies  education as we develop tools and resources that make a lasting
+                impact. 
+              </div>
+            </div>
+            <!-- boton de registro -->
+        
+        
+          </div>
     </section>
 
     <!--Banner-->
     <section class="ngl__banner">
-
+        
     </section>
 
     <!--Date-->
